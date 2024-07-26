@@ -40,11 +40,11 @@ function CreateTask({ addTask }) {
 function Todo() {
     const [tasks, setTasks] = useState([
         {
-            title: "Buy some Bread",
+            title: "Buy Bread",
             completed: true
         },
         {
-            title: "Get coffee",
+            title: "Gym time",
             completed: true
         },
         {

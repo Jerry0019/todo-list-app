@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import logo from './logo.svg';
 import './App.css';
-import Todo from './Todo'; // Ensure the path to your Todo component is correct
+import Todo from './components/Todo'; // Ensure the path to your Todo component is correct
 
 class App extends Component {
   render() {

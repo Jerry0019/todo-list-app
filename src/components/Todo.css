@@ -1,19 +1,26 @@
 
 /* src/components/Todo.css */
+body {
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default body margin */
+}
 
-body{
-  background: rgb(80, 123, 231);
-  }
-  
-  .todo-container{
-  background: rgb(18, 35, 42);
-  width: 40vw;
-  margin: 10em auto;
+.todo-container {
+  background: rgb(29, 76, 231);
+  width: 100%; /* Adjust width to be more responsive */
+  max-width: 400px; /* Optional: Set a maximum width for larger screens */
+  margin: 0; /* Remove margin for better centering */
   border-radius: 15px;
   padding: 20px 10px;
   color: white;
-  border: 3px solid rgb(18, 54, 96);
-  }
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a box shadow */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
       
   .task{
   border: 1px solid white;
@@ -23,13 +30,13 @@ body{
   }
   
   .task button{
-  background: rgb(12, 124, 251);
+  background: rgb(29, 183, 63);
   border-radius: 5px;
   margin: 0px 5px;
   padding: 3px 5px;
   border: none;
   cursor: pointer;
-  color: white;
+  color: rgb(255, 255, 255);
   float: right;
   }
   
@@ -39,10 +46,44 @@ body{
   text-align: center;
   }
   
-  .create-task input[type=text]{
-  margin: 2.5em 2em;
-  width: 80%;
-  outline: none;
-  border: none;
-  padding: 0.7em;
+  .create-task {
+    display: flex;
+    justify-content: center; /* Center the input within its container */
+    margin-top: 2em;
+  }
+  
+  .create-task input[type="text"] {
+    width: 100%; /* Make sure the input takes full width available */
+    max-width: 400px; /* Optional: limit the maximum width of the input */
+    outline: none;
+    border: 1px solid #ddd;
+    padding: 0.8em;
+    border-radius: 10px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+  }
+  @media (max-width: 768px) {
+    .todo-container {
+      width: 90vw; /* Use a percentage for responsive width */
+      padding: 15px; /* Adjust padding for smaller screens */
+      margin: 5em auto; /* Adjust margin for smaller screens */
+    }
+  
+    .create-task input[type="text"] {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      font-size: 1.5em;
+    }
+  
+    .task {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .task button {
+      margin-top: 5px;
+    }
   }
